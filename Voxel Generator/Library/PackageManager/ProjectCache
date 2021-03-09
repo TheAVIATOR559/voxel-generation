@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637508429677182121
-    m_Hash: 2570917052
+      ticks: 637509281755142665
+    m_Hash: 510896042
   m_LockFileStatus:
     m_FilePath: D:/GitHub/voxel-generation/Voxel Generator/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637508429989511041
-    m_Hash: 1851384430
+      ticks: 637509281764588271
+    m_Hash: 3693138314
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -155,6 +155,11 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
         compatible:
         - 1.0.2
         - 1.0.6
@@ -174,6 +179,11 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -240,6 +250,7 @@ m_PackageAssets:
         - 2.0.1
         - 2.0.2
         - 2.0.3
+        - 2.0.5
         - 2.0.7
         compatible:
         - 1.0.2
@@ -252,6 +263,7 @@ m_PackageAssets:
         - 2.0.1
         - 2.0.2
         - 2.0.3
+        - 2.0.5
         - 2.0.7
         verified: 2.0.7
       dependencies:
@@ -279,7 +291,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637486638490000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -348,13 +360,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637394922300000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: 547f63839bdc87e0aed2c9e0d84f8f6336a83ea3
+        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
     - packageId: com.unity.render-pipelines.universal@10.3.1
       testable: 0
@@ -394,17 +406,27 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
+        - 7.5.2
+        - 7.5.3
         - 8.0.1
         - 8.1.0
         - 8.2.0
+        - 8.3.1
         - 9.0.0-preview.14
         - 9.0.0-preview.35
         - 9.0.0-preview.55
+        - 9.0.0-preview.72
         - 10.0.0-preview.26
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
         - 10.3.1
+        - 10.3.2
         compatible:
         - 10.3.1
-        verified: 10.3.1
+        - 10.3.2
+        verified: 10.3.2
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
@@ -446,13 +468,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637472780290000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/Graphics.git
-        revision: c502607c7eb9419ff235ff1648b5c01e7f2bd9c9
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 04da21e5dc442239eb39b80d9b201a16d860bd75
         path: 
     - packageId: com.unity.test-framework@1.1.22
       testable: 0
@@ -497,10 +519,15 @@ m_PackageAssets:
         - 1.1.13
         - 1.1.14
         - 1.1.16
+        - 1.1.18
+        - 1.1.19
+        - 1.1.20
         - 1.1.22
+        - 1.1.24
         compatible:
         - 1.1.22
-        verified: 1.1.22
+        - 1.1.24
+        verified: 1.1.24
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -530,20 +557,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637469345300000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: 56c667cbc326a1cbab8dfd7ebc693a1121d0abe1
         path: 
-    - packageId: com.unity.textmeshpro@3.0.1
+    - packageId: com.unity.textmeshpro@3.0.4
       testable: 0
       isDirectDependency: 1
-      version: 3.0.1
+      version: 3.0.4
       source: 1
-      resolvedPath: D:\GitHub\voxel-generation\Voxel Generator\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: D:\GitHub\voxel-generation\Voxel Generator\Library\PackageCache\com.unity.textmeshpro@3.0.4
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -612,6 +639,8 @@ m_PackageAssets:
         - 1.5.0-preview.14
         - 1.5.0
         - 1.5.1
+        - 1.5.3
+        - 1.5.4
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
@@ -629,6 +658,8 @@ m_PackageAssets:
         - 2.1.0-preview.14
         - 2.1.0
         - 2.1.1
+        - 2.1.3
+        - 2.1.4
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -642,9 +673,13 @@ m_PackageAssets:
         - 3.0.0-preview.14
         - 3.0.0
         - 3.0.1
+        - 3.0.3
+        - 3.0.4
         compatible:
         - 3.0.1
-        verified: 3.0.1
+        - 3.0.3
+        - 3.0.4
+        verified: 3.0.4
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -673,13 +708,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637314376320000000
+      datePublishedTicks: 637492944820000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: 1604b62e543216408311bcd1355a7a9ca1e65765
+        revision: e2f8dffb26de9a130d5b2140d83891d9a7825330
         path: 
     - packageId: com.unity.timeline@1.4.6
       testable: 0
@@ -719,6 +754,7 @@ m_PackageAssets:
         - 1.2.15
         - 1.2.16
         - 1.2.17
+        - 1.2.18
         - 1.3.0-preview.2
         - 1.3.0-preview.3
         - 1.3.0-preview.5
@@ -731,6 +767,7 @@ m_PackageAssets:
         - 1.3.4
         - 1.3.5
         - 1.3.6
+        - 1.3.7
         - 1.4.0-preview.1
         - 1.4.0-preview.2
         - 1.4.0-preview.3
@@ -741,19 +778,33 @@ m_PackageAssets:
         - 1.4.1
         - 1.4.2
         - 1.4.3
+        - 1.4.4
+        - 1.4.5
         - 1.4.6
+        - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
         - 1.5.0-preview.3
         - 1.5.0-preview.4
         - 1.5.0-preview.5
+        - 1.5.1-pre.1
+        - 1.5.1-pre.2
+        - 1.5.1-pre.3
+        - 1.5.2
+        - 1.6.0-pre.1
         compatible:
         - 1.4.6
+        - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
         - 1.5.0-preview.3
         - 1.5.0-preview.4
         - 1.5.0-preview.5
+        - 1.5.1-pre.1
+        - 1.5.1-pre.2
+        - 1.5.1-pre.3
+        - 1.5.2
+        - 1.6.0-pre.1
         verified: 1.4.6
       dependencies:
       - name: com.unity.modules.director
@@ -791,7 +842,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637463150940000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2629,12 +2680,14 @@ m_PackageAssets:
         - 0.1.6-preview
         - 0.1.9-preview
         - 1.0.0
+        - 1.0.5
         - 1.0.6
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
         - 0.1.9-preview
         - 1.0.0
+        - 1.0.5
         - 1.0.6
         verified: 1.0.6
       dependencies: []
@@ -2655,7 +2708,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637429759280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2831,18 +2884,28 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
+        - 7.5.2
+        - 7.5.3
         - 8.0.1
         - 8.1.0
         - 8.2.0
+        - 8.3.1
         - 9.0.0-preview.13
         - 9.0.0-preview.35
         - 9.0.0-preview.38
         - 9.0.0-preview.60
+        - 9.0.0-preview.77
         - 10.0.0-preview.30
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
         - 10.3.1
+        - 10.3.2
         compatible:
         - 10.3.1
-        verified: 10.3.1
+        - 10.3.2
+        verified: 10.3.2
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -2866,13 +2929,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637472777410000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/Graphics.git
-        revision: c502607c7eb9419ff235ff1648b5c01e7f2bd9c9
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 04da21e5dc442239eb39b80d9b201a16d860bd75
         path: 
     - packageId: com.unity.shadergraph@10.3.1
       testable: 0
@@ -2965,17 +3028,27 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
+        - 7.5.2
+        - 7.5.3
         - 8.0.1
         - 8.1.0
         - 8.2.0
+        - 8.3.1
         - 9.0.0-preview.14
         - 9.0.0-preview.34
         - 9.0.0-preview.55
+        - 9.0.0-preview.72
         - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
         - 10.3.1
+        - 10.3.2
         compatible:
         - 10.3.1
-        verified: 10.3.1
+        - 10.3.2
+        verified: 10.3.2
       dependencies:
       - name: com.unity.render-pipelines.core
         version: 10.3.1
@@ -3005,13 +3078,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637472777690000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/Graphics.git
-        revision: c502607c7eb9419ff235ff1648b5c01e7f2bd9c9
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 04da21e5dc442239eb39b80d9b201a16d860bd75
         path: 
     - packageId: com.unity.searcher@4.3.1
       testable: 0
