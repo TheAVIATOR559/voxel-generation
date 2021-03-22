@@ -19,16 +19,23 @@ public class Chunk
 
     World m_world;
 
+    public bool IsVoxelMapPopulated = false;
+    private bool m_IsActive;
     public bool IsActive
     {
         get
         {
-            return chunkObject.activeSelf;
+            return m_IsActive;
         }
 
         set
         {
-            chunkObject.SetActive(value);
+            m_IsActive = value;
+            if(chunkObject != null)
+            {
+                chunkObject.SetActive(value);
+                //Debug.Log("Messing with " + chunkObject.name + "'s active status and setting it to " + value);
+            }
         }
     }
 
@@ -38,11 +45,20 @@ public class Chunk
     }
 
     // Start is called before the first frame update
-    public Chunk(Vector2Int position, World world)
+    public Chunk(Vector2Int position, World world, bool generateOnLoad)
     {
         coord = position;
         m_world = world;
+        IsActive = true;
 
+        if(generateOnLoad)
+        {
+            Init();
+        }
+    }
+
+    public void Init()
+    {
         chunkObject = new GameObject();
         meshFilter = chunkObject.AddComponent<MeshFilter>();
         meshRend = chunkObject.AddComponent<MeshRenderer>();
@@ -70,6 +86,8 @@ public class Chunk
                 }
             }
         }
+
+        IsVoxelMapPopulated = true;
     }
 
     private void CreateMeshData()
@@ -151,10 +169,19 @@ public class Chunk
 
         if (!IsVoxelInChunk(x, y, z))
         {
-            return m_world.blockTypes[m_world.GetVoxel(pos + position)].isSolid;
+            return m_world.CheckForVoxel(pos + position);
         }
 
         return m_world.blockTypes[voxelMap[x, y, z]].isSolid;
+    }
+
+    public byte GetVoxelFromGlobalVector3(Vector3 pos)
+    {
+        int xCheck = Mathf.FloorToInt(pos.x) - Mathf.FloorToInt(chunkObject.transform.position.x);
+        int yCheck = Mathf.FloorToInt(pos.y);
+        int zCheck = Mathf.FloorToInt(pos.z) - Mathf.FloorToInt(chunkObject.transform.position.z);
+
+        return voxelMap[xCheck, yCheck, zCheck];
     }
 
     private void AddTexture(int textureID)

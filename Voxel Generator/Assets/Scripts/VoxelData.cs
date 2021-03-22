@@ -6,7 +6,7 @@ public static class VoxelData
 {
     public static readonly int ChunkWidth = 16;
     public static readonly int ChunkHeight = 128;
-    public static readonly int WorldSizeInChunks = 10;
+    public static readonly int WorldSizeInChunks = 100;
 
     public static int WorldSizeInVoxels
     {
@@ -64,4 +64,12 @@ public static class VoxelData
         new Vector2(1,0),
         new Vector2(1,1)
     };
+
+    public static Vector2Int Vector3ToVector2Int(Vector3 pos)
+    {
+        int xCheck = Mathf.FloorToInt(pos.x);
+        int zCheck = Mathf.FloorToInt(pos.z);
+
+        return new Vector2Int(xCheck / ChunkWidth, zCheck / ChunkWidth);
+    }
 }
