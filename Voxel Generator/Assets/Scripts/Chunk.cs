@@ -70,8 +70,8 @@ public class Chunk
         chunkObject.name = "Chunk (" + coord.x + ", " + coord.y + ")";
 
         PopulateVoxelChunk();
-        CreateMeshData();
-        CreateMesh();
+        UpdateChunk();
+
     }
 
     private void PopulateVoxelChunk()
@@ -90,8 +90,10 @@ public class Chunk
         IsVoxelMapPopulated = true;
     }
 
-    private void CreateMeshData()
+    private void UpdateChunk()
     {
+        ClearMeshData();
+
         for (int y = 0; y < VoxelData.ChunkHeight; y++)
         {
             for (int x = 0; x < VoxelData.ChunkWidth; x++)
@@ -100,14 +102,24 @@ public class Chunk
                 {
                     if (m_world.blockTypes[voxelMap[x, y, z]].isSolid)
                     {
-                        AddVoxelDataToChunk(new Vector3(x, y, z));
+                        UpdateMeshData(new Vector3(x, y, z));
                     }
                 }
             }
         }
+
+        CreateMesh();
     }
 
-    private void AddVoxelDataToChunk(Vector3 pos)
+    private void ClearMeshData()
+    {
+        vertexIndex = 0;
+        vertices.Clear();
+        triangles.Clear();
+        uvs.Clear();
+    }
+
+    private void UpdateMeshData(Vector3 pos)
     {
         for (int i = 0; i < 6; i++)
         {
@@ -158,6 +170,34 @@ public class Chunk
         else
         {
             return true;
+        }
+    }
+
+    public void EditVoxel(Vector3 pos, byte newID)
+    {
+        int xCheck = Mathf.FloorToInt(pos.x) - Mathf.FloorToInt(chunkObject.transform.position.x);
+        int yCheck = Mathf.FloorToInt(pos.y);
+        int zCheck = Mathf.FloorToInt(pos.z) - Mathf.FloorToInt(chunkObject.transform.position.z);
+
+        voxelMap[xCheck, yCheck, zCheck] = newID;
+
+        UpdateSurroundingVoxels(xCheck, yCheck, zCheck);
+
+        UpdateChunk();
+    }
+
+    private void UpdateSurroundingVoxels(int x, int y, int z)
+    {
+        Vector3 thisVoxel = new Vector3(x, y, z);
+
+        for(int p = 0; p < 6; p++)
+        {
+            Vector3 currentVoxel = thisVoxel + VoxelData.faceChecks[p];
+
+            if(!IsVoxelInChunk((int)currentVoxel.x, (int)currentVoxel.y, (int)currentVoxel.z))
+            {
+                m_world.GetChunkFromVector3(currentVoxel + position).UpdateChunk();
+            }
         }
     }
 
